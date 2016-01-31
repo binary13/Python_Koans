@@ -9,23 +9,23 @@ class AboutSets(Koan):
 
         there_can_only_be_only_one = set(highlanders)
 
-        self.assertEqual(__, there_can_only_be_only_one)
+        self.assertEqual({'MacLeod', 'Ramirez', 'Matunas', 'Malcolm'}, there_can_only_be_only_one)
 
     def test_empty_sets_have_different_syntax_to_populated_sets(self):
-        self.assertEqual(__, {1, 2, 3})
-        self.assertEqual(__, set())
+        self.assertEqual({3, 2, 1}, {1, 2, 3})
+        self.assertEqual(set({}), set())
 
     def test_dictionaries_and_sets_use_same_curly_braces(self):
         # Note: Sets have only started using braces since Python 3
 
-        self.assertEqual(__, {1, 2, 3}.__class__)
-        self.assertEqual(__, {'one': 1, 'two': 2}.__class__)
+        self.assertEqual(set, {1, 2, 3}.__class__)
+        self.assertEqual(dict, {'one': 1, 'two': 2}.__class__)
 
-        self.assertEqual(__, {}.__class__)
+        self.assertEqual(dict, {}.__class__)
 
     def test_creating_sets_using_strings(self):
-        self.assertEqual(__, {'12345'})
-        self.assertEqual(__, set('12345'))
+        self.assertEqual({'12345'}, {'12345'})
+        self.assertEqual({'1', '2', '3', '4', '5'}, set('12345'))
 
     def test_convert_the_set_into_a_list_to_sort_it(self):
         self.assertEqual(__, sorted(set('12345')))
