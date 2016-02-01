@@ -13,7 +13,7 @@ class AboutIteration(Koan):
         for num in it:
             fib += num
 
-        self.assertEqual(__ , fib)
+        self.assertEqual(15 , fib)
 
     def test_iterating_with_next(self):
         stages = iter(['alpha','beta','gamma'])
