@@ -75,7 +75,7 @@ class AboutGenerators(Koan):
 
     def test_generator_method_with_parameter(self):
         result = self.square_me(range(2,5))
-        self.assertEqual(__, list(result))
+        self.assertEqual([4, 9, 16], list(result))
 
     # ------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ class AboutGenerators(Koan):
 
     def test_generator_keeps_track_of_local_variables(self):
         result = self.sum_it(range(2,5))
-        self.assertEqual(__, list(result))
+        self.assertEqual([2, 5, 9], list(result))
 
     # ------------------------------------------------------------------
 
